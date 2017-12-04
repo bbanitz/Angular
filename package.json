@@ -1,47 +1,88 @@
 {
-  "name": "line-chart",
-  "version": "0.0.0",
-  "license": "MIT",
-  "angular-cli": {},
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test",
-    "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+  "_args": [
+    [
+      {
+        "raw": "lineChart@https://github.com/jqwidgets/lineChart/tarball/master",
+        "scope": null,
+        "escapedName": "lineChart",
+        "name": "lineChart",
+        "rawSpec": "https://github.com/jqwidgets/lineChart/tarball/master",
+        "spec": "https://github.com/jqwidgets/lineChart/tarball/master",
+        "type": "remote"
+      },
+      "C:\\Users\\Bernard\\AppData\\Roaming\\npm\\node_modules\\lineChart"
+    ]
+  ],
+  "_from": "https://github.com/jqwidgets/lineChart/tarball/master",
+  "_id": "lineChart@0.1.0",
+  "_inCache": true,
+  "_location": "/lineChart/lineChart",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "lineChart@https://github.com/jqwidgets/lineChart/tarball/master",
+    "scope": null,
+    "escapedName": "lineChart",
+    "name": "lineChart",
+    "rawSpec": "https://github.com/jqwidgets/lineChart/tarball/master",
+    "spec": "https://github.com/jqwidgets/lineChart/tarball/master",
+    "type": "remote"
   },
-  "private": true,
+  "_requiredBy": [],
+  "_resolved": "https://github.com/jqwidgets/lineChart/tarball/master",
+  "_shasum": "b65d814de0816ecd6a1b75a65352b18d0a32f911",
+  "_shrinkwrap": null,
+  "_spec": "lineChart@https://github.com/jqwidgets/lineChart/tarball/master",
+  "_where": "C:\\Users\\Bernard\\AppData\\Roaming\\npm\\node_modules\\lineChart",
+  "author": {
+    "name": "www.jqwidgets.com"
+  },
   "dependencies": {
-    "@angular/common": "^2.3.1",
-    "@angular/compiler": "^2.3.1",
-    "@angular/core": "^2.3.1",
-    "@angular/forms": "^2.3.1",
-    "@angular/http": "^2.3.1",
-    "@angular/platform-browser": "^2.3.1",
-    "@angular/platform-browser-dynamic": "^2.3.1",
-    "@angular/router": "^3.3.1",
-    "core-js": "^2.4.1",
+    "@angular/animations": "^5.0.1",
+    "@angular/common": "^5.0.1",
+    "@angular/compiler": "^5.0.1",
+    "@angular/core": "^5.0.1",
+    "@angular/forms": "^5.0.1",
+    "@angular/http": "^5.0.1",
+    "@angular/platform-browser": "^5.0.1",
+    "@angular/platform-browser-dynamic": "^5.0.1",
+    "@angular/router": "^5.0.1",
+    "core-js": "^2.5.1",
     "jqwidgets-framework": "^5.4.0",
-    "rxjs": "^5.0.1",
-    "ts-helpers": "^1.1.1",
-    "zone.js": "^0.7.2"
+    "jqwidgets-scripts": "^5.4.0",
+    "rxjs": "^5.5.2",
+    "zone.js": "^0.8.18"
   },
+  "description": "jQWidgets Angular Template Project",
   "devDependencies": {
-    "@angular/compiler-cli": "^2.3.1",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "^6.0.42",
-    "angular-cli": "1.0.0-beta.28.3",
-    "codelyzer": "~2.0.0-beta.1",
-    "jasmine-core": "2.5.2",
-    "jasmine-spec-reporter": "2.5.0",
-    "karma": "1.2.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-remap-istanbul": "^0.2.1",
-    "protractor": "~4.0.13",
-    "ts-node": "1.2.1",
-    "tslint": "^4.3.0",
-    "typescript": "~2.0.3"
-  }
+    "@angular/cli": "1.5.0",
+    "@angular/compiler-cli": "^5.0.1",
+    "@angular/language-service": "^5.0.1",
+    "@types/jasmine": "~2.6.3",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.0.50",
+    "codelyzer": "~4.0.1",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~1.7.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.2.0",
+    "ts-node": "~3.3.0",
+    "tslint": "~5.8.0",
+    "typescript": "~2.4.2"
+  },
+  "license": "http://www.jqwidgets.com/license/",
+  "name": "lineChart",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# lineChart\nPlease refer to its documentation:\n  - [Getting Started](https://github.com/jqwidgets/lineChart/blob/master/README.md#getting-started) \n  - [jQWidgets Angular Documentation](http://www.jqwidgets.com/angular-components-documentation/)\n\nThis project is based on [Angular CLI](https://cli.angular.io/).\n\n## Quick Overview\n```sh\nnpm i -g lineChart \n\nlineChart my-app\ncd my-app\nnpm start\n```\n\nThen open [http://localhost:4200/](http://localhost:4200/) to see your app.<br>\nWhen you’re ready to deploy to production, create a minified bundle with `npm run build`.\n\n## Getting Started\n\n### Installation\n\nInstall it once globally:\n\n```sh\nnpm install -g lineChart\n```\n\n**Make sure you have the latest version of [Node](https://nodejs.org/en/) on your machine**.\n\n### Creating an App\n\n```sh\nlineChart my-app\ncd my-app\n```\n\nIt will create a directory called `my-app` inside the current folder.<br>\nInside that directory, it will generate the initial project structure and install the transitive dependencies:\n\n```\nmy-app\n├── e2e\n├── node_modules\n├── src\n├── .angular-cli.json\n├── karma.conf.js\n├── package.json\n├── protractor.conf.js\n├── README.md\n├── tsconfig.json\n├── tslint.json\n```\n\nSubfolders are not shown in order to keep it short.<br>\nOnce the installation is done, you can run some commands inside the project folder:\n\n### `npm start`\nBuilds the app in development mode and starts a web server. <br />\nOpen [http://localhost:4200](http://localhost:4200) to view it in the browser. <br />\nThe page will reload if you make edits.\n\n### `npm run build`\nBuilds the app in production mode and stores it in the `dist/` directory.\n\n## Why Use This?\n\n**If you’re getting started** with `jQWidgets` and `Angular`, using `lineChart` is the easiest way to do this.  <br />\nJust install, run and you will see an Angular jQWidgets Grid on your page. <br />\nThen you can customize the project as much as you want, making something great.\n",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "ng build --base-href ./ --prod",
+    "start": "ng serve"
+  },
+  "version": "0.1.0"
 }

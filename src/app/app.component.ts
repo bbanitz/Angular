@@ -10,13 +10,15 @@ export class AppComponent {
 
     source: any =
     {
-        datatype: "csv",
+        datatype: "json",
         datafields: [
-            { name: 'Date' },
-            { name: 'S&P 500' },
-            { name: 'NASDAQ' }
+            { name: 'date', type: 'date'},
+            { name: 'temperature' },
+			{ name: 'consigne'},
+    		{ name: 'position'}
         ],
-        url: '/sampledata/nasdaq_vs_sp500.txt'
+        url: 'http://localhost:9000/values'
+        //url: '/sampledata/data.json'
     };
 
     dataAdapter: any = new jqx.dataAdapter(this.source, { async: false, autoBind: true, loadError: (xhr: any, status: any, error: any) => { alert('Error loading "' + this.source.url + '" : ' + error); } });
@@ -24,18 +26,18 @@ export class AppComponent {
     padding: any = { left: 10, top: 5, right: 10, bottom: 5 };
 
     titlePadding: any = { left: 50, top: 0, right: 0, bottom: 10 };
-
+    
     xAxis: any =
     {
-        dataField: 'Date',
+        dataField: 'date',
         formatFunction: (value: any) => {
-            return value.getDate() + '-' + this. months[value.getMonth()] + '-' + value.getFullYear();
+            return value.getDate() + '-' + this. months[value.getMonth()] + '-' + value.getFullYear() + " " +value.getHours()+":"+value.getMinutes();
         },
         type: 'date',
-        baseUnit: 'month',
+        baseUnit: 'minute',
         valuesOnTicks: true,
-        minValue: '01-01-2014',
-        maxValue: '01-01-2015',
+        //minValue: '29-11-2017T10:30:00Z',
+        //maxValue: '30-11-2017T12:30:00Z',
         tickMarks: {
             visible: true,
             interval: 1,
@@ -50,7 +52,8 @@ export class AppComponent {
         labels: {
             angle: -45,
             rotationPoint: 'topright',
-            offset: { x: 0, y: -25 }
+            offset: { x: 0, y: -25 },
+			step : 10
         }
     };
 
@@ -66,8 +69,9 @@ export class AppComponent {
         {
             type: 'line',
             series: [
-                { dataField: 'S&P 500', displayText: 'Température' },
-                { dataField: 'NASDAQ', displayText: 'Consigne' }
+                { dataField: 'temperature', displayText: 'Température' },
+                { dataField: 'consigne', displayText: 'Consigne'},
+                { dataField: 'position', displayText: 'Ouverture'}
             ]
         }
     ];
